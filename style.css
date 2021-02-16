@@ -1,0 +1,38 @@
+body {
+    font-size: 15pt;
+}
+#idParent {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.child1{
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  left: 0px;
+  bottom: 0px;
+  background-color: orange;
+  transition: left 2s;
+  transition-delay: 2s;
+}
+.child2{
+  position: absolute;
+  width: 10px;
+  height: 90px;
+  left: 50px;
+  bottom: 0px;
+  background-color: blue;
+  transition: left 2s;
+  transition-delay: 2s;
+}
+.child2-2{
+   
+
+  left: 0px;
+}
+.child1-2{
+  left:50px;
+}
