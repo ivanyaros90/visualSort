@@ -5,47 +5,47 @@ var state={
   elements:20,
   tableWidth:800,
   tableHeigth:400,
-
-};
-state.generate= ()=>{
+  elementWidth:20,
+  generate: function(){
   let parent= document.getElementById("idParent");
   removeAllChildNodes(parent);
-  this
-  this.state.numbers=[];
-  this.state.doms=[];
-  for(let i=0;i<6;i++){
+  this.numbers=[];
+  this.doms=[];
+  this.elementWidth=20;
+  for(let i=0;i<this.elements;i++){
     let x,y;    
-    [x,y]=createValue(i);    
+    [x,y]=createValue(i,this.elementWidth);    
     parent.appendChild(y);
-    this.state.numbers.push(x);
-    this.state.doms.push(y);
+    this.numbers.push(x);
+    this.doms.push(y);
   }
+}
 }
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
+};
 
 
 
 function action(arg) {
   document.getElementById('child2').classList.add('child2-2');
   document.getElementById('child1').classList.add('child1-2');
-}
+};
 function removeAllChildNodes(parent){
   while(parent.firstChild  ){
      parent.removeChild(parent.firstChild);
   }
-}
-function createValue(pos=0){
-   let number= Math.floor(Math.random()*101);
+};
+function createValue(pos,width){
+   let number= Math.floor(Math.random()*401);
    let valor=document.createElement("div");
    //valor.innerText=number;
-   valor.style.width="50px";
+   valor.style.width=width+"px";
    valor.style.height=number +"px";
    valor.style.bottom="0px";
-   valor.style.left=(50*pos)+"px";
+   valor.style.left=(width*pos)+"px";
    valor.style.backgroundColor="grey";
-   valor.style.border="2px";
+   valor.style.border="1px";
    valor.style.borderStyle="solid";
    valor.style.borderColor="black";
    valor.style.position="absolute";
