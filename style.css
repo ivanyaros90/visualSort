@@ -3,8 +3,8 @@ body {
 }
 #idParent {
   position: relative;
-  width: 800px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   background-color: lightblue;
 }
 
